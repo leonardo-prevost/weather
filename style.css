@@ -122,3 +122,9 @@ footer {
     color: #FFF;
     font-size: 13px;
 }
+footer a{
+    margin-top: 20px;
+    color: #FFF;
+    font-size: 13px;
+    text-decoration: none;
+}
