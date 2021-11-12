@@ -31,7 +31,6 @@ document.querySelector(".search").addEventListener("submit", async(e)=>{
 function showInfo(json){
     showWarning('');
 
-    document.querySelector('.result').style.display = 'block';
 
     document.querySelector('.title').innerHTML =`${json.name}, ${json.country}`;
     document.querySelector('.tempInfo').innerHTML = `${json.temp} <sup>ºC</sup>`;
@@ -41,6 +40,8 @@ function showInfo(json){
 
 
     document.querySelector('.windPoint').style.transform = `rotate(${json.windAngle-90}deg)`;
+
+    document.querySelector('.result').style.display = 'block';
 }
 
 function clearInfo() {
