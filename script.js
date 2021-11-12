@@ -21,6 +21,7 @@ document.querySelector(".search").addEventListener("submit", async(e)=>{
                 windAngle: json.wind.deg
             });
         }else {
+            clearInfo();
             showWarning('Não encontramos esta localização!')
         }
     } 
@@ -39,6 +40,11 @@ function showInfo(json){
 
 
     document.querySelector('.windPoint').style.transform = `rotate(${json.windAngle-90}deg)`;
+}
+
+function clearInfo() {
+    showWarning('');
+    document.querySelector('.result').style.display = 'none';
 }
 
 function showWarning(msg){
